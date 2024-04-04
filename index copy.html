@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Maaf yang Santai</title>
+    <style>
+        /* Style untuk pertanyaan */
+        .question-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-size: 24px;
+            color: #333;
+            font-family: Arial, sans-serif;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .question:hover {
+            transform: scale(1.05);
+        }
+
+        /* Style untuk tombol */
+        .button-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Style untuk pesan maaf */
+        .apology-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            text-align: left;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: none;
+            transition: opacity 0.5s ease-in-out; /* Animasi transisi */
+        }
+
+        .apology-title {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .apology-content {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .apology-list {
+            margin-bottom: 20px;
+        }
+
+        .apology-list li {
+            margin-bottom: 10px;
+        }
+
+        .signature {
+            font-style: italic;
+        }
+
+        /* Style untuk keinginan */
+        .desire-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #ff1493;
+            border-radius: 10px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe4e1;
+            display: none;
+            transition: opacity 0.5s ease-in-out; /* Animasi transisi */
+        }
+
+        .desire-title {
+            font-size: 24px;
+            color: #ff1493;
+            margin-bottom: 20px;
+        }
+
+        .desire-content {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .desire-emoji {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Pertanyaan -->
+    <div class="question-container">
+        <div class="question">Kamu marah ya sama aku?</div>
+    </div>
+
+    <!-- Tombol Ya dan Tidak -->
+    <div class="button-container">
+        <button id="yesButton" onclick="showApologyWithAnimation()" class="button">Ya</button>
+        <button id="noButton" onclick="showDesireWithAnimation()" class="button">Tidak</button>
+    </div>
+
+    <!-- Pesan Maaf -->
+    <div class="apology-container" id="apologyContainer">
+        <h1 class="apology-title">Maaf Ya Naia</h1>
+        <div class="apology-content">
+            <p>Aku tahu aku bikin kesal kamu tadi. Maaf banget ya. Aku nggak sengaja kok bikin kamu kesel.</p>
+        </div>
+    </div>
+
+    <!-- Keinginan -->
+    <div class="desire-container" id="desireContainer">
+        <div class="desire-content">
+            <h1 class="desire-title">Yaudah sih bodo amat</h1>
+        </div>
+    </div>
+
+    <script>
+        var apologyContainer = document.getElementById("apologyContainer");
+        var desireContainer = document.getElementById("desireContainer");
+
+        // Fungsi untuk menampilkan pesan maaf dengan animasi
+        function showApologyWithAnimation() {
+            apologyContainer.style.opacity = "0"; // Set opacity menjadi 0 terlebih dahulu
+            apologyContainer.style.display = "block"; // Tampilkan container
+            setTimeout(function () {
+                apologyContainer.style.opacity = "1"; // Set opacity menjadi 1 dengan animasi
+            }, 50); // Tunda animasi sedikit untuk memberikan waktu agar CSS diterapkan
+
+
+            desireContainer.style.display = "none";
+        }
+
+        // Fungsi untuk menampilkan keinginan dengan animasi
+        function showDesireWithAnimation() {
+            desireContainer.style.opacity = "0"; // Set opacity menjadi 0 terlebih dahulu
+            desireContainer.style.display = "block"; // Tampilkan container
+            setTimeout(function () {
+                desireContainer.style.opacity = "1"; // Set opacity menjadi 1 dengan animasi
+            }, 50); // Tunda animasi sedikit untuk memberikan waktu agar CSS diterapkan
+
+            apologyContainer.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
